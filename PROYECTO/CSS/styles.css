@@ -10,121 +10,86 @@ body {
     background-color: #000;
 }
 
-header {
-    width: 100%;
-    height: 90px;
+/* ================== HEADER ================== */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background-color: #212b4a;
+}
+
+.site-header .navbar {
     background-color: #212b4a;
     display: flex;
-    align-items: center;
-}
-
-.barra {
-    max-width: 100%;
-    padding: 0 10px;
-    margin: auto;
-    display: flex;
+    align-items: center; 
     justify-content: space-between;
-    align-items: center;
+    padding: 0.5rem 1rem;
 }
 
-/* Logo */
-.logo {
-    float: left;
-    padding: 5px 20px 0;
-}
-
-.logo img {
-    height: 60px;
+.brand-logo {
+    height: 50px;
     width: auto;
     object-fit: contain;
-    transition: transform 0.3s ease;
+    display: block;
 }
 
-.logo img:hover {
-    transform: scale(1.1);
+.site-header .navbar-nav {
+    display: flex;
+    align-items: center; 
+    gap: 1rem;
 }
 
-/* Menú */
-.navegacion {
+.site-header .nav-link {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .3px;
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
-.navegacion ul {
-    list-style: none;
-    padding: 0 10px;
-    display: flex;
+.site-header .nav-link:hover {
+    color: #1e66f7;
 }
 
-.navegacion ul li {
-    display: inline-block;
-    position: relative;
-    transition: 0.3s linear;
+.site-header .navbar-toggler {
+    border-color: rgba(255, 255, 255, .2);
 }
 
-.navegacion ul li:hover {
-    transform: scale(1.1);
+.site-header .navbar-toggler:focus {
+    box-shadow: 0 0 0 .15rem rgba(255, 255, 255, .2);
 }
 
-.navegacion ul li a {
-    color: #ffffff;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 12px 20px;
-    transition: 0.3s linear;
-}
-
-.navegacion ul li a:hover {
-    color: #000000;
-    transform: scale(1.1);
-}
-
-/* Submenú */
-.navegacion ul li:hover .hijos {
-    display: block;
-}
-
-.navegacion .submenu .hijos {
-    display: none;
-    background: #0b132b;
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-}
-
-.navegacion .submenu .hijos li {
-    display: block;
-}
-
-.navegacion .submenu .hijos li a {
-    display: block;
-}
-
-
-.buscador .form-control {
-    border-radius: 20px 0 0 20px;
+/* Buscador */
+.site-header .form-control {
+    border-radius: 99px 0 0 99px;
     padding: 8px 12px;
+    max-width: 300px; 
 }
 
-.buscador .btn {
-    border-radius: 0 20px 20px 0;
-    transition: background-color 0.3s ease;
+.site-header .btn.btn-primary {
+    background: #1e66f7;
+    border-color: #1e66f7;
+    border-radius: 0 99px 99px 0;
 }
 
-.buscador .btn:hover {
-    background-color: #0039a3;
+.site-header .btn.btn-primary:hover {
+    filter: brightness(1.1);
 }
 
+@media (max-width: 991.98px) {
+    .site-header .nav-link {
+        padding: .5rem 0;
+    }
 
+    .site-header form[role="search"] .input-group {
+        width: 100%;
+        margin-top: .5rem;
+    }
+}
 
-
-
-
-
-
-/*Footer*/
+/* ================== FOOTER ================== */
 :root {
     --navy: #1f2b48;
     --accent: #1e66f7;
@@ -145,7 +110,7 @@ header {
 }
 
 .site-footer a:hover {
-    color: white;
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -268,11 +233,10 @@ address {
 }
 
 .footer-bottom {
+    position: relative;
     display: flex;
-    justify-content: center;
-    /* centrado horizontal */
-    align-items: center;
-    /* centrado vertical */
+    justify-content: center; 
+    align-items: center; 
     padding: 1rem 1.25rem;
     border-top: 1px solid rgba(255, 255, 255, .08);
     background: #1b253f;
@@ -283,7 +247,6 @@ address {
     color: var(--muted);
     font-size: .95rem;
     text-align: center;
-    /* por si el texto salta de línea */
 }
 
 .back-to-top {
@@ -303,7 +266,6 @@ address {
     border-color: transparent;
 }
 
-
 .sr-only {
     position: absolute;
     width: 1px;
@@ -316,13 +278,14 @@ address {
     border: 0;
 }
 
-@media (max-width: 1024px) {
+/* ====== Responsive Footer ====== */
+@media (max-width:1024px) {
     .footer-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width:640px) {
     .footer-grid {
         grid-template-columns: 1fr;
     }
@@ -333,7 +296,7 @@ address {
 
     .footer-bottom {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: .5rem;
     }
 }

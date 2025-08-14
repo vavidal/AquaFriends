@@ -19,39 +19,49 @@
     </head>
     <body>
 
-        <header>
-            <div class="barra">
-                <a href="../PROYECTO/IMAGENES/Logo_acuario.png" class="logo"
-                    target="blank">
-                    <img src="../PROYECTO/IMAGENES/Logo_acuario.png"
-                        alt="Logo"></a>
-                <nav class="navegacion">
-                    <ul>
-                        <li><a href="xxxx" target="blank">Inicio</a></li>
-                        <li><a href="xxxxx" target="blank">Contactanos</a></li>
-                        <li class="submenu">
-                            <a href="xxx" target="blank">Colegios</a>
-                        </li>
-                        <li><a href="xxx" target="blank">Mapa</a></li>
-                        <li><a href="xxxxx" target="blank">Noticias</a></li>
-                    </ul>
-                </nav>
-                <form class="buscador d-flex" action="/buscar" method="GET"
-                    role="search">
-                    <div class="input-group">
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="query"
-                            placeholder="Buscar..."
-                            aria-label="Buscar">
-                        <button class="btn btn-primary" type="submit">
-                            <i class="bi bi-search"></i>
-                        </button>
-                    </div>
-                </form>
+        <header class="site-header">
+            <nav
+                class="navbar navbar-dark navbar-expand-lg container-fluid px-2">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="../PROYECTO/IMAGENES/Logo_acuario.png" alt="Logo"
+                        class="brand-logo me-2">
+                </a>
 
-            </div>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul
+                        class="navbar-nav ms-auto me-lg-3 align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="xxxx"
+                                target="_blank">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="xxxxx"
+                                target="_blank">Contáctanos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="xxx"
+                                target="_blank">Colegios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="xxx"
+                                target="_blank">Mapa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="xxxxx"
+                                target="_blank">Noticias</a></li>
+                    </ul>
+
+                    <!-- Buscador -->
+                    <form class="d-flex w-100 w-lg-auto" action="/buscar"
+                        method="GET" role="search">
+                        <div class="input-group w-100 w-lg-auto">
+                            <input type="text" class="form-control" name="query"
+                                placeholder="Buscar..." aria-label="Buscar">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </nav>
         </header>
 
         <br><br><br>
@@ -89,8 +99,7 @@
                     <p>Recibe actividades y noticias.</p>
                     <form class="newsletter" action="#" method="post"
                         onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
-                        <label class="sr-only" for="newsletter-email">Correo
-                            electrónico</label>
+                        <label class="sr-only" for="newsletter-email"></label>
                         <input id="newsletter-email" type="email"
                             placeholder="tu@correo.cl" required />
                         <button type="submit" class="btn-primary">
