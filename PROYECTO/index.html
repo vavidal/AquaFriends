@@ -6,25 +6,25 @@
         <title>Parque Acuario Puyehue</title>
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet">
-        <link
+            rel="stylesheet"><link
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-            rel="stylesheet">
-        <link
+            rel="stylesheet"><link
             href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="../PROYECTO/CSS/styles.css">
+            rel="stylesheet"><link rel="stylesheet"
+            href="../PROYECTO/CSS/styles.css">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     </head>
     <body>
 
         <header>
             <div class="barra">
-                <!-- Logo -->
-                <a href="#" class="logo" target="blank">
-                    <img src="../PROYECTO/IMAGENES/Logo_acuario.png" alt="Logo">
-                </a>
-
-                <!-- Menú de navegación -->
+                <a href="../PROYECTO/IMAGENES/Logo_acuario.png" class="logo"
+                    target="blank">
+                    <img src="../PROYECTO/IMAGENES/Logo_acuario.png"
+                        alt="Logo"></a>
                 <nav class="navegacion">
                     <ul>
                         <li><a href="xxxx" target="blank">Inicio</a></li>
@@ -36,9 +36,6 @@
                         <li><a href="xxxxx" target="blank">Noticias</a></li>
                     </ul>
                 </nav>
-
-                <!-- Buscador -->
-                <!-- Buscador mejorado con Bootstrap -->
                 <form class="buscador d-flex" action="/buscar" method="GET"
                     role="search">
                     <div class="input-group">
@@ -57,5 +54,69 @@
             </div>
         </header>
 
+        <br><br><br>
+        <br><br>
+
+        <footer class="site-footer">
+            <div class="footer-grid">
+                <section class="footer-col">
+                    <h3>Dirección</h3>
+                    <address>
+                        Ruta interlagos T981 U km 3 chiscaihue<br />
+                        Comuna de Rio Bueno, Región de Los Lagos
+                    </address>
+                    <p class="contact">
+                        <i class="bi bi-telephone"></i> +56 9 xxxx xxxx <br />
+                        <i class="bi bi-envelope"></i> xxxxx@xxxxx.xx
+                    </p>
+                </section>
+
+                <section class="footer-col">
+                    <h3>Horarios</h3>
+                    <ul class="hours">
+                        <li><span>Lunes a
+                                Viernes</span><span>10:00–18:00</span></li>
+                        <li><span>Sábado</span><span>10:00–19:00</span></li>
+                        <li><span>Domingo y
+                                festivos</span><span>10:00–19:00</span></li>
+                        <li class="note"><i class="bi bi-info-circle"></i>
+                            Último ingreso 45 min antes del cierre.</li>
+                    </ul>
+                </section>
+
+                <section class="footer-col">
+                    <h3>Boletín</h3>
+                    <p>Recibe actividades y noticias.</p>
+                    <form class="newsletter" action="#" method="post"
+                        onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte!');">
+                        <label class="sr-only" for="newsletter-email">Correo
+                            electrónico</label>
+                        <input id="newsletter-email" type="email"
+                            placeholder="tu@correo.cl" required />
+                        <button type="submit" class="btn-primary">
+                            <i class="bi bi-send"></i> Suscribirme
+                        </button>
+                    </form>
+
+                    <nav class="social">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-tiktok"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#"><i class="bi bi-envelope"></i></a>
+                    </nav>
+                </section>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    <span id="year"></span> © Parque Acuario Puyehue. Todos los
+                    derechos reservados.
+                </p>
+                <button class="back-to-top"><i
+                        class="bi bi-arrow-up"></i></button>
+            </div>
+        </footer>
     </body>
+    <script src="../PROYECTO/JS/script.js"></script>
 </html>
