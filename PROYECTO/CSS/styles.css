@@ -35,7 +35,7 @@ body {
     border-radius: .75rem
 }
 
-/* ---------- Botón primario genérico ---------- */
+
 .btn-brand {
     background: var(--brand);
     color: #fff;
@@ -85,7 +85,7 @@ body {
     margin-top: 10px;
 }
 
-/* texto blanco en todos los elementos del hero */
+
 .hero,
 .hero .hero-text,
 .hero .hero-text h1,
@@ -157,7 +157,6 @@ body {
     }
 }
 
-/* ---------- Tarjeta AquaFriends ---------- */
 .af-card {
     background: linear-gradient(180deg, rgba(12, 20, 38, .92), rgba(12, 20, 38, .88));
     backdrop-filter: blur(6px);
@@ -212,7 +211,7 @@ body {
     margin: .25rem auto 0
 }
 
-/* ---------- Cards / Galería / Footer ---------- */
+/* ---------- Cards / Galería  ---------- */
 .section-title {
     font-weight: 700
 }
@@ -278,13 +277,9 @@ body {
 /* ===== Footer  ===== */
 .site-footer {
     --sf-bg: #0d1a2b;
-    /* fondo sección */
     --sf-bg-bottom: #0b1a26;
-    /* franja inferior */
     --sf-ink: #e8f0f6;
-    /* texto */
     --sf-accent: var(--brand);
-    /* celeste líneas/botones */
     background: var(--sf-bg);
     color: var(--sf-ink);
 }
@@ -308,7 +303,7 @@ body {
     }
 }
 
-/* línea celeste bajo el título */
+
 .site-footer .sf-title::after {
     content: "";
     display: block;
@@ -325,7 +320,6 @@ body {
     }
 }
 
-/* Botones sociales: borde redondeado, icono grande */
 .social-btn {
     display: inline-flex;
     align-items: center;
@@ -344,7 +338,7 @@ body {
     transform: translateY(-1px);
 }
 
-/* Form suscripción */
+
 .sf-form .form-control {
     border-radius: .5rem;
     background: #fff;
@@ -354,14 +348,12 @@ body {
     border-radius: .5rem;
 }
 
-/* Franja inferior */
 .footer-bottom {
     background: var(--sf-bg-bottom);
     color: #cfe6ff;
 }
 
 
-/* ---------- Tipografías grandes ---------- */
 @media (min-width:1200px) {
     .hero .display-3 {
         font-size: 4.4rem
