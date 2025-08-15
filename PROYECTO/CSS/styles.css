@@ -1,0 +1,369 @@
+:root {
+    --brand: #0ea5e9;
+    --brand-dark: #0369a1;
+    --accent: #22c55e;
+    --ink: #0f172a;
+    --hero-overlay: rgba(3, 14, 29, .35);
+    --cta-360: #fd7e14;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+    color: var(--ink);
+    margin: 0;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+@media (min-width:992px) {
+    .navbar-logo {
+        height: 46px
+    }
+}
+
+.navbar .form-control,
+.navbar .btn {
+    border-radius: .75rem
+}
+
+/* ---------- Botón primario genérico ---------- */
+.btn-brand {
+    background: var(--brand);
+    color: #fff;
+    border: none;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background: var(--brand-dark);
+    color: #fff;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    background: url('../IMAGENES/imagen_inicio.jpg') center/cover no-repeat;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--hero-overlay);
+    z-index: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 50%
+}
+
+.hero-text h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    color: #fff;
+}
+
+.hero-text h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* texto blanco en todos los elementos del hero */
+.hero,
+.hero .hero-text,
+.hero .hero-text h1,
+.hero .hero-text h3,
+.hero .hero-box,
+.hero .hero-box h2,
+.hero .hero-box p {
+    color: #fff !important
+}
+
+.hero-box {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(11, 19, 43, .88);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 350px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, .12);
+}
+
+.hero-box h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem
+}
+
+.hero-box p {
+    margin-bottom: 15px;
+    line-height: 1.5
+}
+
+/* CTA naranja */
+.cta-button {
+    display: inline-block;
+    background-color: #ff7f11;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color .3s ease, transform .15s ease;
+    margin-bottom: 10px;
+}
+
+.cta-button:hover {
+    background-color: #e86e00
+}
+
+.cta-button:active {
+    transform: translateY(1px)
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 12px
+}
+
+/* Espaciado vertical en móviles */
+@media (max-width:991.98px) {
+    .hero {
+        padding: 32px 20px;
+        flex-direction: column;
+        gap: 24px
+    }
+
+    .hero-text {
+        max-width: 100%
+    }
+}
+
+/* ---------- Tarjeta AquaFriends ---------- */
+.af-card {
+    background: linear-gradient(180deg, rgba(12, 20, 38, .92), rgba(12, 20, 38, .88));
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, .12);
+    box-shadow: 0 24px 60px rgba(2, 8, 23, .45), inset 0 1px 0 rgba(255, 255, 255, .06);
+    border-radius: 24px;
+    color: #fff;
+    padding: 28px 26px;
+    width: 100%;
+    max-width: 520px;
+}
+
+.af-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: clamp(1.6rem, 1rem + 2vw, 2.2rem);
+    margin: 0 0 .5rem;
+    letter-spacing: .3px;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, .35);
+}
+
+.af-desc {
+    text-align: center;
+    margin: 0 0 1rem;
+    opacity: .95;
+    line-height: 1.5
+}
+
+.btn-360 {
+    background: var(--cta-360);
+    border-color: var(--cta-360);
+    color: #fff;
+    box-shadow: 0 14px 36px rgba(253, 126, 20, .45);
+    padding: .95rem 1.6rem;
+    font-weight: 700;
+    border-radius: .9rem;
+}
+
+.btn-360:hover {
+    background: #e86f09;
+    border-color: #e86f09;
+    color: #fff;
+    box-shadow: 0 16px 40px rgba(232, 111, 9, .55);
+}
+
+.af-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    margin: .25rem auto 0
+}
+
+/* ---------- Cards / Galería / Footer ---------- */
+.section-title {
+    font-weight: 700
+}
+
+.icon-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #e0f2fe;
+    color: var(--brand);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 8px 24px rgba(2, 6, 23, .08)
+}
+
+.card-header {
+    background: transparent;
+    border-bottom: none
+}
+
+.rounded-xxl {
+    border-radius: 1.25rem
+}
+
+.gallery-img {
+    object-fit: cover;
+    height: 220px
+}
+
+
+
+#lightboxModal .modal-content {
+    background: #000;
+    border: 0;
+}
+
+#lightboxModal img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 2rem);
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Footer  ===== */
+.site-footer {
+    --sf-bg: #0d1a2b;
+    /* fondo sección */
+    --sf-bg-bottom: #0b1a26;
+    /* franja inferior */
+    --sf-ink: #e8f0f6;
+    /* texto */
+    --sf-accent: var(--brand);
+    /* celeste líneas/botones */
+    background: var(--sf-bg);
+    color: var(--sf-ink);
+}
+
+.site-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-footer .sf-title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: .75rem;
+    position: relative;
+    padding-bottom: .5rem;
+}
+
+@media (min-width: 768px) {
+    .site-footer .sf-title {
+        text-align: left;
+    }
+}
+
+/* línea celeste bajo el título */
+.site-footer .sf-title::after {
+    content: "";
+    display: block;
+    width: 75%;
+    max-width: 280px;
+    height: 3px;
+    margin: .4rem auto 0;
+    background: var(--sf-accent);
+}
+
+@media (min-width:768px) {
+    .site-footer .sf-title::after {
+        margin-left: 0;
+    }
+}
+
+/* Botones sociales: borde redondeado, icono grande */
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: .5rem;
+    border: 2px solid var(--sf-accent);
+    font-size: 1.25rem;
+    transition: transform .15s ease, background-color .2s ease, color .2s ease;
+}
+
+.social-btn:hover {
+    background: var(--sf-accent);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Form suscripción */
+.sf-form .form-control {
+    border-radius: .5rem;
+    background: #fff;
+}
+
+.sf-form .btn {
+    border-radius: .5rem;
+}
+
+/* Franja inferior */
+.footer-bottom {
+    background: var(--sf-bg-bottom);
+    color: #cfe6ff;
+}
+
+
+/* ---------- Tipografías grandes ---------- */
+@media (min-width:1200px) {
+    .hero .display-3 {
+        font-size: 4.4rem
+    }
+}
