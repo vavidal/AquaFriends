@@ -1,3 +1,6 @@
+/* =========================================================
+   Variables y base
+========================================================= */
 :root {
     --brand: #0ea5e9;
     --brand-dark: #0369a1;
@@ -5,6 +8,22 @@
     --ink: #0f172a;
     --hero-overlay: rgba(3, 14, 29, .35);
     --cta-360: #fd7e14;
+
+    /* Fichas */
+    --card-h-d: 420px;
+    /* alto tarjeta desktop */
+    --card-h-t: 400px;
+    /* tablet */
+    --card-h-m: 360px;
+    /* móvil */
+    --media-w: clamp(180px, 26vw, 260px);
+    --media-ratio: 3/4;
+    /* relación del óvalo (ancho/alto) */
+
+    --blob-a: #f2592a;
+    /* naranjo */
+    --blob-b: #205d67;
+    /* verde-azulado */
 }
 
 html {
@@ -17,11 +36,13 @@ body {
     margin: 0;
 }
 
-/* ---------- Navbar ---------- */
+/* =========================================================
+   Navbar / botones
+========================================================= */
 .navbar-logo {
     height: 40px;
     width: auto;
-    display: block;
+    display: block
 }
 
 @media (min-width:992px) {
@@ -35,20 +56,21 @@ body {
     border-radius: .75rem
 }
 
-
 .btn-brand {
     background: var(--brand);
     color: #fff;
-    border: none;
+    border: none
 }
 
 .btn-brand:hover,
 .btn-brand:focus {
     background: var(--brand-dark);
-    color: #fff;
+    color: #fff
 }
 
-/* ---------- HERO ---------- */
+/* =========================================================
+   HERO
+========================================================= */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -57,6 +79,7 @@ body {
     justify-content: space-between;
     padding: 0 80px;
     background: url('../IMAGENES/imagen_inicio.jpg') center/cover no-repeat;
+    color: #fff;
 }
 
 .hero::after {
@@ -64,7 +87,7 @@ body {
     position: absolute;
     inset: 0;
     background: var(--hero-overlay);
-    z-index: 0;
+    z-index: 0
 }
 
 .hero-text {
@@ -76,24 +99,13 @@ body {
 .hero-text h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 4rem;
-    color: #fff;
+    color: #fff
 }
 
 .hero-text h3 {
     font-size: 2rem;
     color: #fff;
-    margin-top: 10px;
-}
-
-
-.hero,
-.hero .hero-text,
-.hero .hero-text h1,
-.hero .hero-text h3,
-.hero .hero-box,
-.hero .hero-box h2,
-.hero .hero-box p {
-    color: #fff !important
+    margin-top: 10px
 }
 
 .hero-box {
@@ -105,6 +117,7 @@ body {
     max-width: 350px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, .12);
+    color: #fff
 }
 
 .hero-box h2 {
@@ -117,7 +130,6 @@ body {
     line-height: 1.5
 }
 
-/* CTA naranja */
 .cta-button {
     display: inline-block;
     background-color: #ff7f11;
@@ -127,7 +139,7 @@ body {
     text-decoration: none;
     font-weight: 700;
     transition: background-color .3s ease, transform .15s ease;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .cta-button:hover {
@@ -144,7 +156,6 @@ body {
     margin-top: 12px
 }
 
-/* Espaciado vertical en móviles */
 @media (max-width:991.98px) {
     .hero {
         padding: 32px 20px;
@@ -157,6 +168,7 @@ body {
     }
 }
 
+/* Card oscura (si la usas en el hero) */
 .af-card {
     background: linear-gradient(180deg, rgba(12, 20, 38, .92), rgba(12, 20, 38, .88));
     backdrop-filter: blur(6px);
@@ -166,8 +178,8 @@ body {
     border-radius: 24px;
     color: #fff;
     padding: 28px 26px;
-    width: 100%;
     max-width: 520px;
+    width: 100%;
 }
 
 .af-title {
@@ -176,7 +188,7 @@ body {
     font-size: clamp(1.6rem, 1rem + 2vw, 2.2rem);
     margin: 0 0 .5rem;
     letter-spacing: .3px;
-    text-shadow: 0 2px 16px rgba(0, 0, 0, .35);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, .35)
 }
 
 .af-desc {
@@ -193,14 +205,14 @@ body {
     box-shadow: 0 14px 36px rgba(253, 126, 20, .45);
     padding: .95rem 1.6rem;
     font-weight: 700;
-    border-radius: .9rem;
+    border-radius: .9rem
 }
 
 .btn-360:hover {
     background: #e86f09;
     border-color: #e86f09;
     color: #fff;
-    box-shadow: 0 16px 40px rgba(232, 111, 9, .55);
+    box-shadow: 0 16px 40px rgba(232, 111, 9, .55)
 }
 
 .af-btn {
@@ -211,7 +223,9 @@ body {
     margin: .25rem auto 0
 }
 
-/* ---------- Cards / Galería  ---------- */
+/* =========================================================
+   Cards / Galería
+========================================================= */
 .section-title {
     font-weight: 700
 }
@@ -223,7 +237,7 @@ body {
     display: grid;
     place-items: center;
     background: #e0f2fe;
-    color: var(--brand);
+    color: var(--brand)
 }
 
 .card {
@@ -245,11 +259,10 @@ body {
     height: 220px
 }
 
-
-
+/* Lightbox */
 #lightboxModal .modal-content {
     background: #000;
-    border: 0;
+    border: 0
 }
 
 #lightboxModal img {
@@ -257,7 +270,200 @@ body {
     width: 100%;
     height: auto;
     max-height: calc(100vh - 2rem);
-    object-fit: contain;
+    object-fit: contain
+}
+
+/* =========================================================
+   Encabezados de sección
+========================================================= */
+.section-head .sec-logo {
+    width: 56px;
+    height: auto
+}
+
+.sec-title {
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: #0f4d5c
+}
+
+.sec-subtitle {
+    color: #70838f;
+    font-weight: 500
+}
+
+section.bg-light {
+    background: #f6fafb
+}
+
+/* ===== Estilo sección similar a la maqueta, 2x2 con igual tamaño ===== */
+:root {
+    --azul: #0f355a;
+    --azulClaro: #cfe5f7;
+    --azulSub: #1e5a8f;
+    --naranja: #f79a5a;
+    --cardShadow: 0 12px 30px rgba(0, 0, 0, .08);
+    --fondo: #eef7ff;
+}
+
+#aves.aves-section {
+    background: var(--fondo);
+}
+
+/* GRID 2x2 (en md+), misma altura y ancho */
+.animals-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+@media (min-width: 768px) {
+    .animals-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 1fr;
+        /* filas igual altura */
+    }
+}
+
+/* TARJETA */
+.animal-card {
+    background: #fff;
+    border-radius: 28px;
+    box-shadow: var(--cardShadow);
+    padding: 28px 28px 36px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    /* imagen izquierda + texto */
+    gap: 28px;
+    height: 100%;
+    /* llena la celda del grid */
+    min-height: 360px;
+    /* controla que todas se vean parejas */
+    overflow: hidden;
+}
+
+@media (max-width: 991.98px) {
+    .animal-card {
+        grid-template-columns: 240px 1fr;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .animal-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Burbujas decorativas por tarjeta */
+.blob {
+    position: absolute;
+    z-index: 0;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .08));
+}
+
+.blob--lt {
+    width: 160px;
+    height: 160px;
+    left: -40px;
+    top: -40px;
+    background: var(--azulClaro);
+    border-radius: 40% 60% 55% 60%;
+}
+
+.blob--rt {
+    width: 180px;
+    height: 180px;
+    right: -50px;
+    top: -20px;
+    background: var(--naranja);
+    border-radius: 60% 40% 60% 55%;
+}
+
+/* IMAGEN en óvalo */
+.animal-media {
+    position: relative;
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: #e9f2fb;
+    box-shadow: inset 0 0 0 10px var(--azulClaro);
+    overflow: hidden;
+}
+
+.animal-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+    .animal-media {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .animal-media {
+        width: 80%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+}
+
+/* CONTENIDO */
+.animal-body {
+    position: relative;
+    z-index: 1;
+}
+
+.animal-title {
+    color: var(--azul);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 6px 0 8px;
+    line-height: 1.1;
+    border-bottom: 4px solid var(--azulSub);
+    padding-bottom: 6px;
+}
+
+.animal-sci {
+    margin-left: .5rem;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--azulSub);
+    text-decoration: underline;
+}
+
+.animal-sci:hover {
+    color: #114d81;
+}
+
+.animal-body p {
+    margin-bottom: .6rem;
+    font-size: 1.05rem;
+    color: #243a52;
+}
+
+.animal-body strong {
+    color: var(--azul);
+}
+
+/* Suaviza sombras en móviles */
+@media (max-width: 575.98px) {
+    .animals-grid {
+        gap: 22px;
+    }
+
+    .animal-card {
+        padding: 22px;
+        border-radius: 22px;
+    }
 }
 
 
@@ -267,14 +473,9 @@ body {
 
 
 
-
-
-
-
-
-
-
-/* ===== Footer  ===== */
+/* =========================================================
+   Footer
+========================================================= */
 .site-footer {
     --sf-bg: #0d1a2b;
     --sf-bg-bottom: #0b1a26;
@@ -286,7 +487,7 @@ body {
 
 .site-footer a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: none
 }
 
 .site-footer .sf-title {
@@ -294,15 +495,14 @@ body {
     text-align: center;
     margin-bottom: .75rem;
     position: relative;
-    padding-bottom: .5rem;
+    padding-bottom: .5rem
 }
 
-@media (min-width: 768px) {
+@media (min-width:768px) {
     .site-footer .sf-title {
-        text-align: left;
+        text-align: left
     }
 }
-
 
 .site-footer .sf-title::after {
     content: "";
@@ -311,12 +511,12 @@ body {
     max-width: 280px;
     height: 3px;
     margin: .4rem auto 0;
-    background: var(--sf-accent);
+    background: var(--sf-accent)
 }
 
 @media (min-width:768px) {
     .site-footer .sf-title::after {
-        margin-left: 0;
+        margin-left: 0
     }
 }
 
@@ -335,25 +535,24 @@ body {
 .social-btn:hover {
     background: var(--sf-accent);
     color: #fff;
-    transform: translateY(-1px);
+    transform: translateY(-1px)
 }
-
 
 .sf-form .form-control {
     border-radius: .5rem;
-    background: #fff;
+    background: #fff
 }
 
 .sf-form .btn {
-    border-radius: .5rem;
+    border-radius: .5rem
 }
 
 .footer-bottom {
     background: var(--sf-bg-bottom);
-    color: #cfe6ff;
+    color: #cfe6ff
 }
 
-
+/* Tipografía adicional para pantallas muy grandes */
 @media (min-width:1200px) {
     .hero .display-3 {
         font-size: 4.4rem
