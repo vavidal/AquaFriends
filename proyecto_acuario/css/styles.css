@@ -171,8 +171,8 @@ body {
 /* Card oscura (si la usas en el hero) */
 .af-card {
     background: linear-gradient(180deg, rgba(12, 20, 38, .92), rgba(12, 20, 38, .88));
-    backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, .12);
     box-shadow: 0 24px 60px rgba(2, 8, 23, .45), inset 0 1px 0 rgba(255, 255, 255, .06);
     border-radius: 24px;
