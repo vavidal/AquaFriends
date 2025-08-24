@@ -1,6 +1,6 @@
-/* =========================================================
-   Variables y base
-========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
 :root {
     --brand: #0ea5e9;
     --brand-dark: #0369a1;
@@ -36,9 +36,8 @@ body {
     margin: 0;
 }
 
-/* =========================================================
-   Navbar / botones
-========================================================= */
+/*Navbar / botones*/
+
 .navbar-logo {
     height: 40px;
     width: auto;
@@ -97,12 +96,13 @@ body {
 }
 
 .hero-text h1 {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Playfair Display", serif;
     font-size: 4rem;
     color: #fff
 }
 
 .hero-text h3 {
+    font-family: "Playfair Display", serif;
     font-size: 2rem;
     color: #fff;
     margin-top: 10px
@@ -121,11 +121,13 @@ body {
 }
 
 .hero-box h2 {
+    font-family: "Playfair Display", serif;
     margin-bottom: 10px;
     font-size: 1.8rem
 }
 
 .hero-box p {
+    font-family: "Playfair Display", serif;
     margin-bottom: 15px;
     line-height: 1.5
 }
