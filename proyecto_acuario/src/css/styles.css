@@ -61,7 +61,7 @@ header.hero {
     min-height: 60svh;
     display: grid;
     align-items: center;
-    background: url('/proyecto_acuario/src/imagenes/hero.jpg') center/cover no-repeat;
+    background: url('/proyecto_acuario/src/imagenes/imagen_inicio.jpg') center/cover no-repeat;
     color: #fff;
 }
 
